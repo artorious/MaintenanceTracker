@@ -14,6 +14,15 @@
 6.  The admin should be able to filter requests
 7.  The user can view all his/her requests
 
+### Mock-ups
+![Home page](static/homepage.png)  
+
+![Admin's page](static/admin_page.png)  
+
+![User's page](static/user_ac_page.png)
+
+
+
 ### Attribution
 [The Andela Developer Challenge](https://docs.google.com/document/d/1_579P_foh3rYVSlXXOtrZTGVRAbQ16NmOK9ejPY6hcM/edit#heading=h.3tasvsn4i3nd) : Build a Product
 
