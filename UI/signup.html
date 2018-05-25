@@ -30,10 +30,14 @@
   <hr>
   <main>
     <div>
-      <h2>Notice Board:</h2>
-        <h4>Attn Admins</h4>
+      <h2>Welcome</h2>
+        <h4>New User</h4>
       <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium, dui sit amet rutrum consectetur, augue magna fermentum odio, dictum posuere diam ante eget tellus. Nunc quam est, feugiat nec ex nec, malesuada semper eros. Morbi tincidunt aliquam pretium. Sed ac cursus arcu. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras 
+          pretium, dui sit amet rutrum consectetur, augue magna fermentum 
+          odio, dictum posuere diam ante eget tellus. Nunc quam est, feugiat 
+          nec ex nec, malesuada semper eros. Morbi tincidunt aliquam pretium. 
+          Sed ac cursus arcu. 
       </p>
       
     </div>
@@ -41,21 +45,23 @@
   </main>
   <form>
     <fieldset>
-      <legend>Administrator</legend>
-      <h4>Login Details</h4>
-      <hr>
+      <legend>New User </legend>
+      <h4>Registration Details</h4> 
+      <hr>           
       <div class="form-row-2">
-        <label for="adminID">Admin ID:</label>
+        <label for="name">Full Name:</label>
         <input 
-              type="text" id="adminID" name="user_name" placeholder="#12234567" 
-              required autofocus
+          type="text" id="name" name="name" 
+          placeholder="John Smith" 
+          required autofocus
         >
-      </div> 
+      </div>
       <hr>           
       <div class="form-row-2">
         <label for="username">Username:</label>
         <input 
-          type="text" id="username" name="user_name" placeholder="JohnSmith" 
+          type="text" id="username" name="user_name" 
+          placeholder="JohnSmith" 
           required autofocus
         >
       </div>
@@ -68,10 +74,26 @@
         >
       </div>
       <hr>
-      <div class="button">
-        <button type="submit">Sign In</button>
+      <div class="form-row-2">
+        <label for="CofirmPassword">Confirm Password:</label>
+        <input 
+          id="CofirmPassword" type="password" name="confirm_password" 
+          autocomplete="off" required autofocus placeholder="********"
+        >
       </div>
-      
+      <hr>
+      <div>
+        <label for="AgreeTerms"><a href="#">I Agree with Terms and conditions</a> </label>
+        <input id="AgreeTerms" type="checkbox">
+      </div>
+      <hr>
+      <div class="button">
+        <button type="submit">Register</button>
+      </div>
+      <hr>
+      <div>
+        <p>Already have  an account? <a href="signin.html">Sign In</a> here.</p>
+      </div>
     </fieldset>
   </form>
   <footer>
