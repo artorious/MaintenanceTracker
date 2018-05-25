@@ -2,13 +2,22 @@ html {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
                 'Lucida Sans', Arial, sans-serif;   
     background-color: white;
-    color: #00112bff;
+    color: black;
     margin: 5px;
 }
 
+body { 
+    width: 100%;
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+
 header {
-    background-color: #00112bff;
-    color: #2a7fffff;
+    background-color: black;
+    color: cyan;
     text-align: left; 
     border-radius: 5px; 
     padding: 0px; 
@@ -39,8 +48,8 @@ div form {
 }
 
 button {
-    color: #2a7fffff;
-    background-color: #00112bff;
+    color: cyan;
+    background-color: black;
     align-self: center;
     border-radius: 5px;   
 }
@@ -52,8 +61,8 @@ button:hover, button:focus {
 }
 
 footer {
-    background-color: #00112bff;
-    color: #2a7fffff; 
+    background-color: black;
+    color: cyan; 
     text-align: center;   
 }
 

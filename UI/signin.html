@@ -19,7 +19,7 @@
     </p>
     <nav>
       <a href="index.html">Home</a> |
-      <a href="signin.html">User Sign In</a>
+      <a href="#">User Sign Up</a>
       <a href="#">
         <img src="images/user_avatar_sm-46px.png" alt="profile picture">
       </a>
@@ -29,9 +29,13 @@
   <main>
     <div>
       <h2>Notice Board:</h2>
-        <h4>Attn Admins</h4>
+        <h4>Dear User</h4>
       <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium, dui sit amet rutrum consectetur, augue magna fermentum odio, dictum posuere diam ante eget tellus. Nunc quam est, feugiat nec ex nec, malesuada semper eros. Morbi tincidunt aliquam pretium. Sed ac cursus arcu. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras 
+          pretium, dui sit amet rutrum consectetur, augue magna fermentum 
+          odio, dictum posuere diam ante eget tellus. Nunc quam est, feugiat 
+          nec ex nec, malesuada semper eros. Morbi tincidunt aliquam pretium. 
+          Sed ac cursus arcu. 
       </p>
       
     </div>
@@ -39,21 +43,14 @@
   </main>
   <form>
     <fieldset>
-      <legend>Administrator</legend>
-      <h4>Login Details</h4>
-      <hr>
-      <div class="form-row-2">
-        <label for="adminID">Admin ID:</label>
-        <input 
-              type="text" id="adminID" name="user_name" placeholder="#12234567" 
-              required autofocus
-        >
-      </div> 
+      <legend>User</legend>
+      <h4>Login Details</h4> 
       <hr>           
       <div class="form-row-2">
         <label for="username">Username:</label>
         <input 
-          type="text" id="username" name="user_name" placeholder="JohnSmith" 
+          type="text" id="username" name="user_name" 
+          placeholder="JohnSmith or johnsmith@email.com" 
           required autofocus
         >
       </div>
@@ -69,7 +66,11 @@
       <div class="button">
         <button type="submit">Sign In</button>
       </div>
-      
+      <hr>
+      <div>
+        <p>Don't have an account? <a href="#">Sign Up</a> here for FREE</p>
+        <p><a href="#">Forgot Password?</a></p>
+      </div>
     </fieldset>
   </form>
   <footer>
