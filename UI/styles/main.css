@@ -24,12 +24,18 @@ header p {
 
 nav {
     float: right;
-}
+} 
+
 
 form {
+    width: 100%;
     background-color: #aaccffff;
     border: 1px solid #aaccffff;
     border-radius: 5px;
+}
+
+div form {
+    display: block;
 }
 
 button {
@@ -54,5 +60,4 @@ footer {
 .form-row-2 * {
     width: 75%
 }
-
 
