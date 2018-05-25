@@ -70,3 +70,30 @@ footer {
     width: 75%
 }
 
+.long-x-axis {
+    overflow-x: auto;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+    border-color: 1px solid black;
+}
+
+th {
+    background-color: black;
+    color: cyan;
+}
+
+th, td {
+    text-align: left;
+    padding: 5px;
+}
+
+tr:nth-child(odd) {
+    background-color: cyan
+}
+
+tr:hover {
+    background-color: grey;
+}
