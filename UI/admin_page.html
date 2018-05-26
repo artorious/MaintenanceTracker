@@ -21,7 +21,7 @@
     </p>
     <nav>
       <a href="index.html">Sign Out</a> |
-      <a href="#">Incoming Requests</a>
+      <a href="incoming_request_template.html">Incoming Requests</a>
       <a href="#">
         <img src="images/user_avatar_sm-46px.png" alt="profile picture">
       </a>
@@ -41,12 +41,13 @@
   <form action="#">
     <label for="sortCriteria">Sort By: </label>
     <select name="sortCriteria">
-      <option value="JobId">Job ID</option>
+      <option value="no-sort">None</option>
+      <option value="jobId">Job ID</option>
       <option value="username">Username</option>
       <option value="firstName">First Name</option>
       <option value="lastName"> Last Name</option>
-      <option value="labRequested"> Lab Requested</option>
-      <option value="jobDescription">Job Description</option>
+      <option value="jobType"> Job Type</option>
+      <option value="jobDescription">Description</option>
       <option value="jobStatus">Job Status</option>
       <option value="startDate">Start Date</option>
       <option value="endDate">End Date</option>
@@ -58,17 +59,16 @@
   <div class="long-x-axis">
     <table>
       <tr>
-        <th>JobID</th>
+        <th>Job ID</th>
         <th>Username</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
-        <th>Lab Requested</th>
-        <th>Job Description</th>
+        <th>Job Type</th>
+        <th>Description</th>
         <th>Job Status</th>
         <th>Start Date</th>
         <th>End Date</th>
-        <th>Remarks</th>
       </tr>
       <tr>
         <td><a href="#">#1</a></td>
@@ -76,12 +76,11 @@
         <td>Peter</td>
         <td>Griffin</td>
         <td>petergriffin@email.com</td>
-        <td>Tech Stop 1</td>
+        <td>Repairs</td>
         <td>Unlock Cell phone - CELLY v1. and restore backup</td>
         <td>Job Started</td>
         <td>01-01-2018</td>
         <td>05-01-2018</td>
-        <td>System firmware replacement a posibility</td>
       </tr>
       <tr>
         <td><a href="#">#2</a></td>
@@ -89,12 +88,11 @@
         <td>Glen</td>
         <td>Quagmire</td>
         <td>glenquagmire@email.com</td>
-        <td>Tech Stop 2</td>
+        <td>Repairs</td>
         <td>Data Recovery - WD HDD1.</td>
         <td>Job Started</td>
         <td>02-01-2018</td>
         <td>07-01-2018</td>
-        <td>HDD Deliverd on 01-01-2028</td>
       </tr>
       <tr>
         <td><a href="#">#3</a></td>
@@ -102,12 +100,11 @@
         <td>Clevland</td>
         <td>Brown</td>
         <td>clevelandbrwown@email.com</td>
-        <td>Tech Stop 3</td>
+        <td>Maintenance</td>
         <td>Virus Scan and sweep - HPV 234 laptop</td>
         <td>Job Started</td>
         <td>05-01-2018</td>
         <td>09-01-2018</td>
-        <td>Laptop delevered to shop</td>
       </tr>
       <tr>
         <td><a href="#">#4</a></td>
@@ -115,12 +112,11 @@
         <td>Stewie</td>
         <td>Griffin</td>
         <td>whatthadeuce@email.com</td>
-        <td>Tech Stop 4</td>
+        <td>Maintenance</td>
         <td>Configure SmartWatch - FitBitt v1.</td>
         <td>Job Resolved</td>
         <td>20-12-2017</td>
         <td>25-12-2017</td>
-        <td>System firmware replacement a posibility</td>
       </tr>
     </table>
   </div>
