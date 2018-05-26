@@ -21,7 +21,7 @@
     </p>
     <nav>
       <a href="index.html">Sign Out</a> |
-      <a href="signin.html">Requests</a>
+      <a href="#">Incoming Requests</a>
       <a href="#">
         <img src="images/user_avatar_sm-46px.png" alt="profile picture">
       </a>
@@ -35,9 +35,26 @@
       <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium, dui sit amet rutrum consectetur, augue magna fermentum odio, dictum posuere diam ante eget tellus. Nunc quam est, feugiat nec ex nec, malesuada semper eros. Morbi tincidunt aliquam pretium. Sed ac cursus arcu. 
       </p>
-      
     </div>   
   </article>
+  <hr>
+  <form action="#">
+    <label for="sortCriteria">Sort By: </label>
+    <select name="sortCriteria">
+      <option value="JobId">Job ID</option>
+      <option value="username">Username</option>
+      <option value="firstName">First Name</option>
+      <option value="lastName"> Last Name</option>
+      <option value="labRequested"> Lab Requested</option>
+      <option value="jobDescription">Job Description</option>
+      <option value="jobStatus">Job Status</option>
+      <option value="startDate">Start Date</option>
+      <option value="endDate">End Date</option>
+      <option value="remarks">Remarks</option>
+    </select>
+    <input type="submit">
+  </form>
+  <hr>
   <div class="long-x-axis">
     <table>
       <tr>
@@ -48,7 +65,7 @@
         <th>Email</th>
         <th>Lab Requested</th>
         <th>Job Description</th>
-        <th>Status</th>
+        <th>Job Status</th>
         <th>Start Date</th>
         <th>End Date</th>
         <th>Remarks</th>
@@ -67,7 +84,7 @@
         <td>System firmware replacement a posibility</td>
       </tr>
       <tr>
-        <td><a href="#">2</a></td>
+        <td><a href="#">#2</a></td>
         <td>secondcustomer</td>
         <td>Glen</td>
         <td>Quagmire</td>
@@ -107,7 +124,6 @@
       </tr>
     </table>
   </div>
-  
   <footer>
       &COPY;MaintenanceTracker 2018. </br>A product of 
       <a href="https://docs.google.com/document/d/1_579P_foh3rYVSlXXOtrZTGVRAbQ16NmOK9ejPY6hcM/edit?ts=5b02882a">
