@@ -15,12 +15,12 @@ body {
     display: block;
 }
 
-header {
+header {   
     background-color: black;
     color: cyan;
     text-align: left; 
     border-radius: 5px; 
-    padding: 0px; 
+    padding: 20px; 
 }
 
 header h1 p {
