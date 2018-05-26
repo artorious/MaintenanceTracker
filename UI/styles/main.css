@@ -23,18 +23,13 @@ header {
     padding: 0px; 
 }
 
-header h1 {
-    padding: 20px;
-}
-
-header p {
+header h1 p {
     padding: 20px;
 }
 
 nav {
     float: right;
 } 
-
 
 form {
     width: 100%;
@@ -70,3 +65,35 @@ footer {
     width: 75%
 }
 
+.long-x-axis {
+    overflow-x: auto;
+}
+
+table {
+    border-spacing: 1px;
+    width: 100%;
+    border-collapse: separate;
+}
+
+th {
+    background-color: black;
+    color: cyan;
+
+}
+
+th, td {
+    text-align: left;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid grey;
+}
+
+tr:nth-child(odd) {
+    background-color: skyblue
+}
+
+tr:hover {
+    background-color: grey;
+}
