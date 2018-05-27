@@ -40,42 +40,47 @@
     </div>
   </article>
   <hr>
-  <form action="#">
-    <fieldset>
-      <legend>Administrator</legend>
-      <h4>Login Details</h4>
-      <hr>
-      <div class="form-row-2">
-        <label for="adminID">Admin ID:</label>
-        <input 
-              type="text" id="adminID" name="user_name" placeholder="#12234567" 
+  <div class="container">
+    <form action="#">
+      <fieldset>
+        <legend>Administrator Login</legend>
+        <div class="row">
+          <div class="col-25">
+            <label for="adminID">Admin ID:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="adminID" name="user_name" placeholder="#12234567" 
               required autofocus
-        >
-      </div> 
-      <hr>           
-      <div class="form-row-2">
-        <label for="username">Username:</label>
-        <input 
-          type="text" id="username" name="user_name" placeholder="JohnSmith" 
-          required autofocus
-        >
-      </div>
-      <hr>
-      <div class="form-row-2">
-        <label for="userPassword">Password:</label>
-        <input 
-          id="userPassword" type="password" name="user_password" 
-          autocomplete="off" required autofocus placeholder="********"
-        >
-      </div>
-      <hr>
-      <div class="button">
-        <button type="submit">Sign In</button>
-        <a href="admin_page.html">#</a>
-      </div>      
-    </fieldset>
-  </form>
-  <hr>
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="username">Username:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="username" name="user_name" \
+              placeholder="JohnSmith" required autofocus
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="userPassword">Password:</label>
+          </div>
+          <div class="col-75">
+            <input id="userPassword" type="password" name="user_password" 
+              autocomplete="off" required autofocus placeholder="********"
+            >
+          </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Sign In">
+        </div>
+      </fieldset>
+    </form>
+    <a href="admin_page.html">#</a>
+  </div>
   <footer>&COPY;MaintenanceTracker 2018.</br><a href="#"> Contact Us.</a></footer>
 </body>
 </html>

@@ -1,13 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
                 'Lucida Sans', Arial, sans-serif;   
     background-color: white;
     color: black;
     margin: 5px;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 body { 
@@ -64,7 +64,6 @@ input[type=submit], select {
     float: right;
 }
 
-
 table {
     border-spacing: 1px;
     width: 100%;
@@ -87,7 +86,7 @@ td {
 }
 
 tr:nth-child(odd) {
-    background-color: skyblue
+    background-color: cyan
 }
 
 tr:hover {
@@ -99,36 +98,6 @@ footer {
     color: cyan; 
     text-align: center;   
 }
-/*
-form {
-    width: 100%;
-    background-color: skyblue;
-    border: 1px solid #aaccffff;
-    border-radius: 5px;
-}
-
-div form {
-    display: block;
-}
-
-button {
-    color: cyan;
-    background-color: black;
-    align-self: center;
-    border-radius: 5px;   
-}
-
-button:hover, button:focus {
-  outline   : none;
-  background: indigo;
-  color   : white;
-}
-
-.form-row-2 * {
-    width: 75%
-}
-*/
-
 
 .container {
     border-radius: 5px;
