@@ -45,41 +45,40 @@
       </ul>
     </div>
   </article>
-  <hr>
-  <div>
+  <div class="container">
     <form action="#">
-      <fieldset>
-        <legend>User Sign In</legend>
-        <h4>Login Details</h4>
-        <hr>
-        <div class="form-row-2">
-          <label for="username">Username:</label>
-          <input 
-            type="text" id="username" name="user_name" placeholder="JohnSmith" 
-            required autofocus
-          >
-        </div>
-        <hr>
-        <div class="form-row-2">
-          <label for="userPassword">Password:</label>
-          <input 
-            id="userPassword" type="password" name="user_password" 
-            autocomplete="off" required autofocus placeholder="********"
-          >
-        </div>
-        <hr>
-        <div class="button">
-          <button type="submit">Sign In</button>
-          <a href="user_page.html">#</a>
-        </div>
-        <hr>
-        <div>
-          <p>Don't have an account? <a href="signup.html">Sign Up</a> here for FREE</p>
-        </div>
-      </fieldset>
+        <fieldset>
+          <legend>Try our Services</legend>
+          <h4>Login Details</h4>
+          <div class="row">
+            <div class="col-25">
+              <label for="username">Username:</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="username" name="user_name" 
+                placeholder="JohnSmith" required autofocus>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="userPassword">Password:</label>
+            </div>
+            <div class="col-75">
+              <input id="userPassword" type="password" name="user_password" 
+                autocomplete="off" required autofocus placeholder="********">
+            </div>
+          </div>
+          
+          <div class="row">
+              <input type="submit" value="Sign In">
+          </div>
+        </fieldset>
     </form>
+    <div>
+        <p>Don't have an account? <a href="signup.html">Sign Up here</a>  for FREE <a href="user_page.html">#</a> </p>
+      </div>
   </div>
-  <hr>
+
   <footer>&COPY;MaintenanceTracker 2018.</br><a href="#"> Contact Us.</a></footer>  
 
 </body>

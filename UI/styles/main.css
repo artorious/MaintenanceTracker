@@ -6,6 +6,10 @@ html {
     margin: 5px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body { 
     width: 100%;
     max-width: 1200px;
@@ -15,66 +19,51 @@ body {
     display: block;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 header {   
     background-color: black;
     color: cyan;
+    border: 5px solid cyan;
     text-align: left; 
     border-radius: 5px; 
     padding: 20px; 
-}
-
-article {
-    padding: 20px;
-}
-header h1 p {
-    padding: 20px;
 }
 
 nav {
     float: right;
 } 
 
-form {
+article {
+    padding: 20px;
+}
+
+input[type=text], input[type=password] {
     width: 100%;
-    background-color: skyblue;
-    border: 1px solid #aaccffff;
-    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
 }
 
-div form {
-    display: block;
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
 }
 
-button {
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: black;
     color: cyan;
-    background-color: black;
-    align-self: center;
-    border-radius: 5px;   
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
 }
 
-button:hover, button:focus {
-  outline   : none;
-  background: indigo;
-  color   : white;
-}
-
-footer {
-    background-color: black;
-    color: cyan; 
-    text-align: center;   
-}
-
-.form-row-2 * {
-    width: 75%
-}
-
-.long-x-axis {
-    overflow-x: auto;
-}
 
 table {
     border-spacing: 1px;
@@ -104,3 +93,79 @@ tr:nth-child(odd) {
 tr:hover {
     background-color: grey;
 }
+
+footer {
+    background-color: black;
+    color: cyan; 
+    text-align: center;   
+}
+/*
+form {
+    width: 100%;
+    background-color: skyblue;
+    border: 1px solid #aaccffff;
+    border-radius: 5px;
+}
+
+div form {
+    display: block;
+}
+
+button {
+    color: cyan;
+    background-color: black;
+    align-self: center;
+    border-radius: 5px;   
+}
+
+button:hover, button:focus {
+  outline   : none;
+  background: indigo;
+  color   : white;
+}
+
+.form-row-2 * {
+    width: 75%
+}
+*/
+
+
+.container {
+    border-radius: 5px;
+    background-color: cyan;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 5px;
+}
+
+/* Clear floats after columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Handle screens under 600px - Stack columns */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* Handle wide tables */
+.long-x-axis {
+    overflow-x: auto;
+}
+
+
