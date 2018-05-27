@@ -38,7 +38,7 @@
   <hr>
 
   <div class="container">
-    <form class="container">
+    <form class="container" action="user_page.html">
       <fieldset>
         <legend>New Request</legend>
         <div class="row">
@@ -58,7 +58,7 @@
             <label for="startDate">Start Date</label>
           </div>
           <div class="col-75">
-            <input type="date" name="startDate">
+            <input type="date" name="startDate" required>
           </div>
         </div>
         <div class="row">
@@ -66,7 +66,7 @@
             <label for="description">Briefing (Scope of work)</label>
           </div>
           <div class="col-75">
-            <textarea name="description">Describe the job as well as you can</textarea>
+            <textarea name="description" required>Describe the job as well as you can</textarea>
           </div>
         </div>
         <div class="row">
@@ -76,7 +76,6 @@
       </fieldset>
     </form>
   </div>
-  <a href="user_page.html">#</a>
   <footer>&COPY;MaintenanceTracker 2018.</br><a href="#"> Contact Us.</a></footer>  
 </body>
 </html>
