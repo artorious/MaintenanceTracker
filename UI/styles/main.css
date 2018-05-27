@@ -36,7 +36,7 @@ article {
     padding: 20px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=date], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid black;
@@ -54,7 +54,7 @@ label {
     display: inline-block;
 }
 
-input[type=submit] {
+input[type=submit], select {
     background-color: black;
     color: cyan;
     padding: 12px 20px;

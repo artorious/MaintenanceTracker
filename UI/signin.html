@@ -44,30 +44,32 @@
   </article>
   <hr>
   <div class="container">
-    <fieldset>
-      <legend>User Login</legend>
-      <div class="row">
-        <div class="col-25">
-          <label for="username">Username:</label>
+    <form action="#">
+      <fieldset>
+        <legend>User Login</legend>
+        <div class="row">
+          <div class="col-25">
+            <label for="username">Username:</label>
+          </div>
+          <div class="row-75">
+            <input type="text" id="username" name="user_name" 
+              placeholder="@JohnSmith" required autofocus>
+          </div>
         </div>
-        <div class="row-75">
-          <input type="text" id="username" name="user_name" 
-            placeholder="@JohnSmith" required autofocus>
+        <div class="row">
+          <div class="row-25">
+            <label for="userPassword">Password :</label>
+          </div>
+          <div class="row-75">
+            <input id="userPassword" type="password" name="user_password" 
+              autocomplete="off" required autofocus placeholder="********">
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="row-25">
-          <label for="userPassword">Password :</label>
+        <div class="row">
+            <input type="submit" value="Sign In">
         </div>
-        <div class="row-75">
-          <input id="userPassword" type="password" name="user_password" 
-            autocomplete="off" required autofocus placeholder="********">
-        </div>
-      </div>
-      <div class="row">
-          <input type="submit" value="Sign In">
-      </div>
-    </fieldset>
+        </fieldset>
+    </form>
     <div>
       <p><a href="user_page.html">#</a>Don't have an account? FREE <a href="signup.html">Sign Up.</a></p>
       <p><a href="#">Forgot Password?</a></p>
