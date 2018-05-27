@@ -15,6 +15,10 @@ body {
     display: block;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 header {   
     background-color: black;
     color: cyan;
@@ -23,6 +27,9 @@ header {
     padding: 20px; 
 }
 
+article {
+    padding: 20px;
+}
 header h1 p {
     padding: 20px;
 }
