@@ -26,8 +26,8 @@
       </a>
     </nav>
   </header>
+  <hr>
   <article>
-    <hr>
     <div>
       <h2>Request Form</h2>
       <p>
@@ -35,30 +35,44 @@
       </p>
     </div>
   </article>
-  <div>
-    <form action="#">
+  <hr>
+
+  <div class="container">
+    <form class="container" action="user_page.html">
       <fieldset>
         <legend>New Request</legend>
-        <br>
-        <label for="jobType">Select Job Type</label>
-        <select required name="jobType" >
-          <option value="no-jobType">Select</option>
-          <option value="lab1">Repairs</option>
-          <option value="lab2">Maintenance</option>
-        </select>
-        <hr>
-        <label for="startDate">Start Date</label>
-        <input type="date" name="startDate">
-        <hr>
-        <label for="description">Briefing (Scope of work)</label>
-        <textarea name="description">Describe the job as well as you can</textarea>
-
-        <hr>
-        <div class="button">
-          <button type="submit">Submit</button> |
-          <a href="user_page.html"><button type="button">Discard</button></a>
+        <div class="row">
+          <div class="col-25">
+            <label for="jobType">Select Job Type</label>
+          </div>
+          <div class="col-75">
+            <select required name="jobType" >
+              <option value="no-jobType">Select</option>
+              <option value="jobType">Repairs</option>
+              <option value="jobType">Maintenance</option>
+            </select>
+          </div>
         </div>
-        <hr>
+        <div class="row">
+          <div class="col-25">
+            <label for="startDate">Start Date</label>
+          </div>
+          <div class="col-75">
+            <input type="date" name="startDate" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="description">Briefing (Scope of work)</label>
+          </div>
+          <div class="col-75">
+            <textarea name="description" required>Describe the job as well as you can</textarea>
+          </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit"> 
+            <input type="submit" value="Discard"> 
+        </div>
       </fieldset>
     </form>
   </div>

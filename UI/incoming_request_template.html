@@ -26,8 +26,8 @@
       </a>
     </nav>
   </header>
+  <hr>
   <article>
-    <hr>
     <div>
       <h2>Inbox - New Request</h2>
       <p>
@@ -35,40 +35,44 @@
       </p>
     </div>
   </article>
-  <table class="long-x-axis">
-    <tr>
-      <th>Username</th>
-      <td>@firstcustomer</td>
-    </tr>
-    <tr>
-      <th>Job Type</th>
-      <td>Repairs</td>
-    </tr>
-    <tr>
-      <th>Start Date</th>
-      <td>01-01-2018</td>
-    </tr>
-    <tr>
-      <th>Description</th>
-      <td>Unlock Cell phone - CELLY v1. and restore backup</td>
-    </tr>
-  </table>
   <hr>
-  <form>
-    <p>Take or leave Job:</p>
-    <div>
-      <input type="radio" id="jobApproval"
-        name="jobStatus"  checked>
-      <label for="jobApproval">Approve Job</label> |
-      <input type="radio" id="rejectJob"
-      name="jobStatus" >
-      <label for="rejectJob">Reject Job</label> |
-      <button type="submit">Confirm</button>
-      <a href="admin_page.html">#</a>
+  <div class="long-x-axis">
+    <table>
+      <tr>
+        <th>Username</th>
+        <td>@firstcustomer</td>
+      </tr>
+      <tr>
+        <th>Job Type</th>
+        <td>Repairs</td>
+      </tr>
+      <tr>
+        <th>Start Date</th>
+        <td>01-01-2018</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>Unlock Cell phone - CELLY v1. and restore backup</td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <div class="container">
+    <form action="admin_page.html">
+      <div class="row">
+        <label for="jobApproval">Take or leave Job:</label>
+      </div>
+      <div class="row">
+        <select name="jobApproval">
+          <option value="no-decscion">Select Here</option>
+          <option value="jobApproved">Approve Job</option>
+          <option value="jobRejected">Reject Job </option>
+      </div>
+    <div class="row">
+        <input type="submit">
     </div>
   </form>
-
-
+  </div>
   <footer>&COPY;MaintenanceTracker 2018.</br><a href="#"> Contact Us.</a></footer>  
 </body>
 </html>

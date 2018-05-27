@@ -28,7 +28,7 @@
     </nav>
   </header>
   <hr>
-  <main>
+  <article>
     <div>
       <h2>Welcome</h2>
         <h4>New User</h4>
@@ -40,70 +40,77 @@
           Sed ac cursus arcu. 
       </p>      
     </div>
-  </main>
-  <form action="#">
-    <fieldset>
-      <legend>New User </legend>
-      <h4>Registration Details</h4> 
-      <hr>           
-      <div class="form-row-2">
-        <label for="firstName">First Name:</label>
-        <input 
-          type="text" id="name" name="name" 
-          placeholder="Johnathan" 
-          required autofocus
-        >
-      </div>
-      <hr>
-      <div class="form-row-2">
-          <label for="lastName">Last Name:</label>
-          <input 
-            type="text" id="name" name="name" 
-            placeholder="Smith" 
-            required autofocus
+  </article>
+  <hr>
+
+  <div class="container">
+    <form action="user_page.html">
+      <fieldset>
+        <legend>User Registration</legend>
+        <div class="row">
+          <div class="col-25">
+            <label for="firstName">First Name:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="name" 
+            placeholder="Johnathan" required autofocus
           >
         </div>
-      <hr>           
-      <div class="form-row-2">
-        <label for="username">Username     :</label>
-        <input 
-          type="text" id="username" name="user_name" 
-          placeholder="@JohnSmith" 
-          required autofocus
-        >
-      </div>
-      <hr>
-      <div class="form-row-2">
-        <label for="userPassword">Password :</label>
-        <input 
-          id="userPassword" type="password" name="user_password" 
-          autocomplete="off" required autofocus placeholder="********"
-        >
-      </div>
-      <hr>
-      <div class="form-row-2">
-        <label for="CofirmPassword">Confirm Password:</label>
-        <input 
-          id="CofirmPassword" type="password" name="confirm_password" 
-          autocomplete="off" required autofocus placeholder="********"
-        >
-      </div>
-      <hr>
-      <div>
-        <label for="AgreeTerms"><a href="#">I Agree with Terms and conditions</a> </label>
-        <input id="AgreeTerms" type="checkbox">
-      </div>
-      <hr>
-      <div class="button">
-        <button type="submit">Register</button>
-        <a href="user_page.html">#</a>
-      </div>
-      <hr>
-      <div>
-        <p>Already have  an account? <a href="signin.html">Sign In</a> here.</p>
-      </div>
-    </fieldset>
-  </form>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lastName">Last Name:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="name" name="name" 
+              placeholder="Smith" required autofocus
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="username">Username :</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="username" name="user_name" 
+              placeholder="@JohnSmith" required autofocus
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="userPassword">Password :</label>
+          </div>
+          <div class="col-75">
+            <input id="userPassword" type="password" name= "user_password" 
+              autocomplete="off" required autofocus placeholder="********"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="CofirmPassword">Confirm Password:</label>
+          </div>
+          <div class="col-75">
+            <input id="CofirmPassword" type="password" name="confirm_password" 
+              autocomplete="off" required autofocus placeholder="********"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <label for="AgreeTerms"><a href="#">I Agree with Terms and conditions</a> </label>
+          <input id="AgreeTerms" type="checkbox" required>
+        </div>
+        <div class="row">
+          <input type="submit" value="Register">
+        </div>
+      </fieldset>
+    </form>
+    <div>
+      <p>Already have  an account? <a href="signin.html">Sign In</a> here.</p>
+    </div>
+  </div>
+
   <footer>&COPY;MaintenanceTracker 2018.</br><a href="#"> Contact Us.</a></footer>
 </body>
 </html>
