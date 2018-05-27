@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
+                'Lucida Sans', Arial, sans-serif;   
+    background-color: white;
+    color: black;
+    margin: 5px;
+}
+
+body { 
+    width: 100%;
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+
+header {   
+    background-color: black;
+    color: cyan;
+    border: 5px solid cyan;
+    text-align: left; 
+    border-radius: 5px; 
+    padding: 20px; 
+}
+
+nav {
+    float: right;
+} 
+
+article {
+    padding: 20px;
+}
+
+input[type=text], input[type=password], input[type=date], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit], select {
+    background-color: black;
+    color: cyan;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+table {
+    border-spacing: 1px;
+    width: 100%;
+    border-collapse: separate;
+}
+
+th {
+    background-color: black;
+    color: cyan;
+
+}
+
+th, td {
+    text-align: left;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid grey;
+}
+
+tr:nth-child(odd) {
+    background-color: cyan
+}
+
+tr:hover {
+    background-color: grey;
+}
+
+footer {
+    background-color: black;
+    color: cyan; 
+    text-align: center;   
+}
+
+.container {
+    border-radius: 5px;
+    background-color: cyan;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 5px;
+}
+
+/* Clear floats after columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Handle screens under 600px - Stack columns */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* Handle wide tables */
+.long-x-axis {
+    overflow-x: auto;
+}
+
+
