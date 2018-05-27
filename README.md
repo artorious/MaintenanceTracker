@@ -1,6 +1,6 @@
 # MaintenanceTracker - A Web Application
 
-[MaintenaceTracker](https://artorious.github.io/MaintenanceTracker/) is an application that provides users wthith the ability to reach out to operations or repairs department regarding repair or maintenance requests and monitor the status of thei request.
+[MaintenanceTracker](https://artorious.github.io/MaintenanceTracker/) is an application that provides users wthith the ability to reach out to operations or repairs department regarding repair or maintenance requests and monitor the status of thei request.
 
 ### Features:
 
