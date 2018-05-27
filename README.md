@@ -1,8 +1,6 @@
-# MaintenanceTracker
-**A Web Application**
+# MaintenanceTracker - A Web Application
 
-### Project Overview
-**MaintenaceTracker** is an application that provides users wthith the ability to reach out to operations or repairs department regarding repair or maintenance requests and monitor the status of thei request.
+[MaintenaceTracker](https://artorious.github.io/MaintenanceTracker/) is an application that provides users wthith the ability to reach out to operations or repairs department regarding repair or maintenance requests and monitor the status of thei request.
 
 ### Features:
 
@@ -14,16 +12,7 @@
 6.  The admin should be able to filter requests
 7.  The user can view all his/her requests
 
-### Mock-ups
-![Home page](static/homepage_desktop.png)  
 
-![Admin's page](static/admin_page_desktop.png)  
-
-![User's page](static/user_ac_page_desktop.png)  
-
-![Home page](static/homepage_mobile.png)  
-
-![Admin's page](static/admin_page_mobile.png)  
 `   
 ### Attribution
 [The Andela Developer Challenge](https://docs.google.com/document/d/1_579P_foh3rYVSlXXOtrZTGVRAbQ16NmOK9ejPY6hcM/edit#heading=h.3tasvsn4i3nd) : Build a Product
