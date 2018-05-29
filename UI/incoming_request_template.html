@@ -11,13 +11,15 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <h1>MaintenanceTracker</h1>
-    <p>
-      The Web Application for all your diagnostics, repairs, 
-      online consultations. Soutions for hardware, software &amp; 
-      firmaware issues.
-    </p>
+  <div class="page">
+    <header>
+      <h1>MaintenanceTracker</h1>
+      <p>
+        The Web Application for all your diagnostics, repairs, 
+        online consultations. Soutions for hardware, software &amp; 
+        firmaware issues.
+      </p>     
+    </header>
     <nav>
       <a href="admin_page.html">Back</a> |
       <a href="index.html">Sign Out</a> 
@@ -25,54 +27,58 @@
         <img src="images/user_avatar_sm-46px.png" alt="profile picture">
       </a>
     </nav>
-  </header>
-  <hr>
-  <article>
-    <div>
-      <h2>Inbox - New Request</h2>
-      <p>
-        <strong>Request handling guidlines:</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium, dui sit amet rutrum consectetur, augue magna fermentum odio, dictum posuere diam ante eget tellus.
-      </p>
-    </div>
-  </article>
-  <hr>
-  <div class="long-x-axis">
-    <table>
-      <tr>
-        <th>Username</th>
-        <td>@firstcustomer</td>
-      </tr>
-      <tr>
-        <th>Job Type</th>
-        <td>Repairs</td>
-      </tr>
-      <tr>
-        <th>Start Date</th>
-        <td>01-01-2018</td>
-      </tr>
-      <tr>
-        <th>Description</th>
-        <td>Unlock Cell phone - CELLY v1. and restore backup</td>
-      </tr>
-    </table>
-  </div>
-  <hr>
-  <div class="container">
-    <form action="admin_page.html">
-      <div class="row">
-        <label for="jobApproval">Take or leave Job:</label>
+    <hr>
+    <article>
+      <div>
+        <h2>Inbox - New Request</h2>
+        <p>
+          <strong>Request handling guidlines:</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
       </div>
-      <div class="row">
-        <select name="jobApproval">
-          <option value="no-decscion">Select Here</option>
-          <option value="jobApproved">Approve Job</option>
-          <option value="jobRejected">Reject Job </option>
-      </div>
-    <div class="row">
-        <input type="submit">
+    </article>
+    <hr>
+    <div class="long-x-axis">
+      <table>
+        <tr>
+          <th>Username</th>
+          <td>@firstcustomer</td>
+        </tr>
+        <tr>
+          <th>Job Type</th>
+          <td>Repairs</td>
+        </tr>
+        <tr>
+          <th>Start Date</th>
+          <td>01-01-2018</td>
+        </tr>
+        <tr>
+          <th>Description</th>
+          <td>Unlock Cell phone - CELLY v1. and restore backup</td>
+        </tr>
+        <tr>
+            <th>Take or leave Job</th>
+            <td>
+              <form action="admin_page.html">
+                <div class="row">
+                  <div>
+                    <select name="jobApproval">
+                      <option value="no-decscion">Select Here</option>
+                      <option value="jobApproved">Approve Job</option>
+                      <option value="jobRejected">Reject Job </option>
+                  </div>
+                  <div class="col-25">
+                    <input type="submit">
+                  </div>
+                </div>
+              </form>
+            </td>
+          </tr>
+      </table>
     </div>
-  </form>
+    <hr>
+    
+    <footer>&COPY;MaintenanceTracker 2018.</br><a href="#"> Contact Us.</a></footer>  
   </div>
-  <footer>&COPY;MaintenanceTracker 2018.</br><a href="#"> Contact Us.</a></footer>  
+
 </body>
 </html>

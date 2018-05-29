@@ -12,13 +12,16 @@
 </head>
 </head>
 <body>
-  <header>
-    <h1>MaintenanceTracker</h1>
-    <p>
-      The Web Application for all your diagnostics, repairs, 
-      online consultations. Soutions for hardware, software &amp; 
-      firmaware issues.
-    </p>
+  <div class="page">
+    <header>
+        <h1>MaintenanceTracker</h1>
+        <p>
+          The Web Application for all your diagnostics, repairs, 
+          online consultations. Soutions for hardware, software &amp; 
+          firmaware issues.
+        </p>
+    </header>
+    <hr>
     <nav>
       <a href="index.html">Sign Out</a> |
       <a href="incoming_request_template.html">Incoming Requests</a>
@@ -26,100 +29,92 @@
         <img src="images/user_avatar_sm-46px.png" alt="profile picture">
       </a>
     </nav>
-  </header>
-  <hr>
-  <article>
-    <div>
-      <h2>Admins Log</h2>
-        <h4>Active Requests</h4>
-      <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium, dui sit amet rutrum consectetur, augue magna fermentum odio, dictum posuere diam ante eget tellus. Nunc quam est, feugiat nec ex nec, malesuada semper eros. Morbi tincidunt aliquam pretium. Sed ac cursus arcu. 
-      </p>
-    </div>   
-  </article>
-  <hr>
-
-  <div class="row">
-    <label for="sortCriteria">Sort By: </label>
-    <select name="sortCriteria">
-      <option value="no-sort">None</option>
-      <option value="jobId">Job ID</option>
-      <option value="username">Username</option>
-      <option value="firstName">First Name</option>
-      <option value="lastName"> Last Name</option>
-      <option value="jobType"> Job Type</option>
-      <option value="jobDescription">Description</option>
-      <option value="jobStatus">Job Status</option>
-      <option value="startDate">Start Date</option>
-      <option value="endDate">End Date</option>
-      <option value="remarks">Remarks</option>
-    </select>
+    <div class="row">
+      <div class="col-25">
+        <select name="sortCriteria">
+          <option value="no-sort">Sort By</option>
+          <option value="jobId">Job ID</option>
+          <option value="username">Username</option>
+          <option value="firstName">First Name</option>
+          <option value="lastName"> Last Name</option>
+          <option value="jobType"> Job Type</option>
+          <option value="jobDescription">Description</option>
+          <option value="jobStatus">Job Status</option>
+          <option value="startDate">Start Date</option>
+          <option value="endDate">End Date</option>
+          <option value="remarks">Remarks</option>
+        </select>
+      </div>
+    </div>
+    <hr>
+    <div class="long-x-axis">
+      <table>
+        <tr>
+          <th colspan="10">Administrator's Log</th>
+        </tr>
+        <tr>
+          <th>Job ID</th>
+          <th>Username</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Job Type</th>
+          <th>Description</th>
+          <th>Job Status</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+        </tr>
+        <tr>
+          <td><a href="expand_request_details.html">#1</a></td>
+          <td>firstcustomer</td>
+          <td>Peter</td>
+          <td>Griffin</td>
+          <td>petergriffin@email.com</td>
+          <td>Repairs</td>
+          <td>Unlock Cell phone - CELLY v1. and restore backup</td>
+          <td>Ongoing</td>
+          <td>01-01-2018</td>
+          <td>05-01-2018</td>
+        </tr>
+        <tr>
+          <td><a href="expand_request_details.html">#2</a></td>
+          <td>secondcustomer</td>
+          <td>Glen</td>
+          <td>Quagmire</td>
+          <td>glenquagmire@email.com</td>
+          <td>Repairs</td>
+          <td>Data Recovery - WD HDD1.</td>
+          <td>Ongoing</td>
+          <td>02-01-2018</td>
+          <td>07-01-2018</td>
+        </tr>
+        <tr>
+          <td><a href="expand_request_details.html">#3</a></td>
+          <td>thirdcustomer</td>
+          <td>Clevland</td>
+          <td>Brown</td>
+          <td>clevelandbrwown@email.com</td>
+          <td>Maintenance</td>
+          <td>Virus Scan and sweep - HPV 234 laptop</td>
+          <td>Ongoing</td>
+          <td>05-01-2018</td>
+          <td>09-01-2018</td>
+        </tr>
+        <tr>
+          <td><a href="expand_request_details.html">#4</a></td>
+          <td>fourthcustomer</td>
+          <td>Stewie</td>
+          <td>Griffin</td>
+          <td>whatthadeuce@email.com</td>
+          <td>Maintenance</td>
+          <td>Configure SmartWatch - FitBitt v1.</td>
+          <td>Job Resolved</td>
+          <td>20-12-2017</td>
+          <td>25-12-2017</td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+    <footer>&COPY;MaintenanceTracker 2018.</br><a href="#"> Contact Us.</a></footer>
   </div>
-  <hr>
-  <div class="long-x-axis">
-    <table>
-      <tr>
-        <th>Job ID</th>
-        <th>Username</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Job Type</th>
-        <th>Description</th>
-        <th>Job Status</th>
-        <th>Start Date</th>
-        <th>End Date</th>
-      </tr>
-      <tr>
-        <td><a href="expand_request_details.html">#1</a></td>
-        <td>firstcustomer</td>
-        <td>Peter</td>
-        <td>Griffin</td>
-        <td>petergriffin@email.com</td>
-        <td>Repairs</td>
-        <td>Unlock Cell phone - CELLY v1. and restore backup</td>
-        <td>Ongoing</td>
-        <td>01-01-2018</td>
-        <td>05-01-2018</td>
-      </tr>
-      <tr>
-        <td><a href="#">#2</a></td>
-        <td>secondcustomer</td>
-        <td>Glen</td>
-        <td>Quagmire</td>
-        <td>glenquagmire@email.com</td>
-        <td>Repairs</td>
-        <td>Data Recovery - WD HDD1.</td>
-        <td>Ongoing</td>
-        <td>02-01-2018</td>
-        <td>07-01-2018</td>
-      </tr>
-      <tr>
-        <td><a href="#">#3</a></td>
-        <td>thirdcustomer</td>
-        <td>Clevland</td>
-        <td>Brown</td>
-        <td>clevelandbrwown@email.com</td>
-        <td>Maintenance</td>
-        <td>Virus Scan and sweep - HPV 234 laptop</td>
-        <td>Ongoing</td>
-        <td>05-01-2018</td>
-        <td>09-01-2018</td>
-      </tr>
-      <tr>
-        <td><a href="#">#4</a></td>
-        <td>fourthcustomer</td>
-        <td>Stewie</td>
-        <td>Griffin</td>
-        <td>whatthadeuce@email.com</td>
-        <td>Maintenance</td>
-        <td>Configure SmartWatch - FitBitt v1.</td>
-        <td>Job Resolved</td>
-        <td>20-12-2017</td>
-        <td>25-12-2017</td>
-      </tr>
-    </table>
-  </div>
-  <hr>
-  <footer>&COPY;MaintenanceTracker 2018.</br><a href="#"> Contact Us.</a></footer>
 </html>
