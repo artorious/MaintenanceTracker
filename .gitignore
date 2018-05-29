@@ -1,0 +1,7 @@
+*.pyc
+*.swp
+.cache/
+__pycache__/
+.pytest_cache/
+app/.cache/
+app/__pycache__/
