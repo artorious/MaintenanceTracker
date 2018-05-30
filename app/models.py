@@ -8,9 +8,14 @@ class Users(object):
     """ Holds methods for users
 
         Attributes:
+            user_account (dict) - Holds all user account details and requests
+            associated with the account.
+            login_status (bool) - True/False flag to indicate wheteher or not a
+            is logged on.
     """
 
     def __init__(self):
+        """TODO: Init with empty dict and bool flag"""
         pass
     
     # GET: /api/v1/users
@@ -40,13 +45,11 @@ class Users(object):
     def register(
             self, email, username, first_name, last_name, 
             password, confirm_password):
-        """(Users, str, str, str) -> str
+        """(Users, str, str, str, str, int, int) -> dict
 
-            Creates a user account and stores user's information
+            Creates a user account and stores user's information.
             
-            Returns 'Success' or 'Fail' message
-            
-            TODO: Return msg to user 'Success/Fail
+            Returns the user login information
         """
         pass
     
