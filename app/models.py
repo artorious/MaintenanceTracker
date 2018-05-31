@@ -4,7 +4,7 @@
 """
 
 
-class Users(object):
+class Users(dict):
     """ Holds methods for users
 
         Attributes:
@@ -15,9 +15,9 @@ class Users(object):
     """
 
     def __init__(self):
-        """TODO: Init with empty dict and bool flag"""
-        pass
-    
+        self.user_account = {}
+        self.login_status = False
+
     # GET: /api/v1/users
     def login(self, username, password):
         """(Users, str, str) -> str
@@ -48,11 +48,17 @@ class Users(object):
         """(Users, str, str, str, str, int, int) -> dict
 
             Creates a user account and stores user's information.
-            
-            Returns the user login information
         """
-        pass
-    
+        if password == confirm_password:
+            self.user_account['first_name'] = first_name
+            self.user_account['last_name'] = last_name
+            self.user_account['username'] = username
+            self.user_account['password'] = password
+            self.login_status = True
+            return 'Account Registered'
+        else:
+            return 'Failed'
+
     # GET: /api/v1/requests
     def all_requests(self):
         """ (Users) -> str

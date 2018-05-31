@@ -21,7 +21,7 @@ class TestUsersClass(unittest.TestCase):
     def test_users_class_inits_with_dict(self):
         """ Test that Users class initializes with an empty dict. """
         self.assertDictEqual(
-            {}, self.sample_user.user_data,
+            {}, self.sample_user,
             'Class does not initailze an empty dict'
         )
 
@@ -29,7 +29,7 @@ class TestUsersClass(unittest.TestCase):
         """ Test that Users class initializes with a login status of False
             (logged off)
         """
-        self.assertIs(False, self.sample_data.login_status)
+        self.assertEqual(False, self.sample_user.login_status)
 
     def test_register_packs_params_into_dict(self):
         """ Test register method inserts provided params into a dict """
@@ -40,9 +40,8 @@ class TestUsersClass(unittest.TestCase):
             'Ngondo',
             123454321,
             123454321)
-        self.assertIn('username', result.user_data)
-        self.assertIn('email', result.user_data)
-        self.assertIn('password', result.user_data)
+        self.assertIn('Account Registered', result)
+        
 
 if __name__ == '__main__':
     unittest.main()

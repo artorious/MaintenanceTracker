@@ -35,7 +35,7 @@ class TestRouteCases(unittest.TestCase):
             data=json.dumps(self.sample),
             headers={'content-type': 'application/json'}
         )
-        self.assertEqual(result.data, 'Success!')
+        self.assertIn(b'Account Registered', result.data)
 
     def test_register_handles_bad_request(self):
         """ Test for returns message to user to indicate Bad request - 404 """
@@ -45,8 +45,9 @@ class TestRouteCases(unittest.TestCase):
             headers={'content-type': 'application/json'}
         )
         self.assertEqual(
-            'Resource NOT Found. Account NOT created',
-            str(result.data)
+            404,
+            result.status_code,
+            msg='Resource NOT Found. Account NOT created'
         )
 
 if __name__ == '__main__':
