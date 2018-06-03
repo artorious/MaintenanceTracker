@@ -21,7 +21,6 @@ class TestRouteCases(unittest.TestCase):
         
         self.sample_bad = {
             'username': '',
-            'email': 'a',
             'password': 123454321,
             'confirm_password': 123454321,
             'first_name': 'Arthur',
