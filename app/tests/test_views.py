@@ -18,6 +18,7 @@ class TestRouteCases(unittest.TestCase):
             'first_name': 'Arthur',
             'last_name': 'Ngondo'
             }
+        self.sample_request = 'This is a sample request'
         
         self.sample_bad = {
             'username': '',
@@ -74,6 +75,15 @@ class TestRouteCases(unittest.TestCase):
             '/api/v1/users/requests'
         )
         self.assertEqual(result.status_code, 200)
+
+    def test_create_request_status_code(self):
+        result = self.app.post(
+            'api/v1/users/requests',
+            data=json.dumps(self.sample_request),
+            headers={'content-type': 'application/json'}
+        )
+        self.assertEqual(result.status_code, 200)
+        self.assertIn(b'Request Added', result.data)
 
 if __name__ == '__main__':
     unittest.main()
