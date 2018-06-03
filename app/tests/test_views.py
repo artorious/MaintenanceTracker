@@ -30,7 +30,7 @@ class TestRouteCases(unittest.TestCase):
     def test_register_status(self):
         """ Test endpoint sends HTTP POST request to the application."""
         result = self.app.post(
-            '/api/v1/register',
+            '/api/v1/users/register',
             data=json.dumps(self.sample),
             headers={'content-type': 'application/json'}
         )
@@ -40,7 +40,7 @@ class TestRouteCases(unittest.TestCase):
     def test_register_handles_bad_request(self):
         """ Test for returns message to user to indicate Bad request - 404 """
         result = self.app.post(
-            '/api/v1/registerss',
+            '/api/v1/users/registerss',
             data=json.dumps(self.sample),
             headers={'content-type': 'application/json'}
         )
@@ -55,19 +55,25 @@ class TestRouteCases(unittest.TestCase):
             data into the payload before posting.
         """
         result = self.app.post(
-            '/api/v1/register',
+            '/api/v1/users/register',
             data=json.dumps(self.sample_bad),
             headers={'content-type': 'application/json'}
         )
         self.assertIn(b'Registration Failed', result.data)
 
-    def test_signout_returns_operation(self):
+    def test_signout_returns_operation_status(self):
         """ Tests for message to user after logging out """
         result = self.app.post(
             '/api/v1/users/signout'
         )
         self.assertEqual(result.status_code, 200)
 
+    def test_requests_returns_operation_status(self):
+        """ Tests for returned success (200) status code """
+        result = self.app.get(
+            '/api/v1/users/requests'
+        )
+        self.assertEqual(result.status_code, 200)
 
 if __name__ == '__main__':
     unittest.main()

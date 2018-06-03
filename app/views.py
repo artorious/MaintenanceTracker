@@ -7,11 +7,9 @@ from app import app
 sample_account = Users()
 
 
-@app.route('/api/v1/register', methods=['POST'])
+@app.route('/api/v1/users/register', methods=['POST'])
 def register():
-    """ Register a new user.
-        Return msg to user - Success or Failed 
-    """
+    """ Register a new user and return message to user """
     req_data = request.get_json()
 
     if (
@@ -43,7 +41,11 @@ def register():
 
 @app.route('/api/v1/users/signout', methods=['POST'])
 def signout():
-    """ Logs out a user.
-        Returns 'Success' or 'Fail' message.
-    """
+    """ Logs out a user and returns message to user. """
     return jsonify(sample_account.logout())
+
+
+@app.route('/api/v1/users/requests', methods=['GET'])
+def requests():
+    """ Fetches all the requests of a logged in user """
+    return jsonify(sample_account.all_user_requests())
