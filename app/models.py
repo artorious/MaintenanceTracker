@@ -49,15 +49,16 @@ class Users(dict):
 
             Creates a user account and stores user's information.
         """
-        if password == confirm_password:
-            self.user_account['first_name'] = first_name
-            self.user_account['last_name'] = last_name
-            self.user_account['username'] = username
-            self.user_account['password'] = password
-            self.login_status = True
-            return 'Account Registered'
-        else:
-            return 'Failed'
+        # if password == confirm_password:
+        #     self.user_account['first_name'] = first_name
+        #     self.user_account['last_name'] = last_name
+        #     self.user_account['username'] = username
+        #     self.user_account['password'] = password
+        #     self.login_status = True
+        #     return 'Account Registered'
+        # else:
+        #     return 'Failed'
+        pass
 
     # GET: /api/v1/requests
     def all_requests(self):

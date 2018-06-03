@@ -41,7 +41,63 @@ class TestUsersClass(unittest.TestCase):
             123454321,
             123454321)
         self.assertIn('Account Registered', result)
+
+    def test_register_handles_existing_username(self):
+        """ Tests for an already registered username
+            before appending to dictionary
+        """
+        result1 = self.sample_user.register(
+            'ngondo@email.com',
+            'artorious',
+            'Arthurs',
+            'Ngondoz',
+            12345432156,
+            12345432156)
         
+        result2 = self.sample_user.register(
+            'arthurngondo@email.com',
+            'artorious',
+            'Arthur',
+            'Ngondo',
+            123454321,
+            123454321)
+        self.assertIn(
+            'Username Already in Use. Try a different name.',
+            result2)
+    
+    def test_register_handles_existing_email(self):
+        """ Tests for an already registered email
+            before appending to dictionary
+        """
+        result1 = self.sample_user.register(
+            'arthurngondo@email.com',
+            'artorious',
+            'Arthurs',
+            'Ngondoz',
+            12345432156,
+            12345432156)
+        
+        result2 = self.sample_user.register(
+            'arthurngondo@email.com',
+            'ngondez',
+            'Arthur',
+            'Ngondo',
+            123454321,
+            123454321)
+        self.assertIn(
+            'Email Already registered. Try a different name.',
+            result2)
+
+    def test_register_handles_inconsistent_passwords(self):
+        """ Tests that register function handles miss-matched passwords """
+        result = self.sample_user.register(
+            'arthurngondo@email.com',
+            'artorious',
+            'Arthur',
+            'Ngondo',
+            1234543213,
+            1234543214)
+        self.assertIn('Password Does not match - Try again', result)
 
 if __name__ == '__main__':
     unittest.main()
