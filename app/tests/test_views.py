@@ -61,5 +61,13 @@ class TestRouteCases(unittest.TestCase):
         )
         self.assertIn(b'Registration Failed', result.data)
 
+    def test_signout_returns_operation(self):
+        """ Tests for message to user after logging out """
+        result = self.app.post(
+            '/api/v1/users/signout'
+        )
+        self.assertEqual(result, "You have been SIGNED OUT")
+
+
 if __name__ == '__main__':
     unittest.main()
