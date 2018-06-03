@@ -17,6 +17,7 @@ class TestUsersClass(unittest.TestCase):
             'first_name': 'Arthur',
             'last_name': 'Ngondo'
             }
+        self.sample_request = 'This is a sample request'
 
     def test_users_class_inits_with_dicts(self):
         """ Test that Users class initializes with an empty dicts. """
@@ -84,6 +85,9 @@ class TestUsersClass(unittest.TestCase):
         """ Tests for Logging out message """
         self.assertEqual(self.sample_user.logout(), "You have been SIGNED OUT")
 
+    def test_create_request_operation_message(self):
+        result = self.sample_user.create_request(self.sample_request)
+        self.assertEqual(result, 'Request Added')
 
 if __name__ == '__main__':
     unittest.main()

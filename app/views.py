@@ -45,7 +45,13 @@ def signout():
     return jsonify(sample_account.logout())
 
 
-@app.route('/api/v1/users/requests', methods=['GET'])
+@app.route('/api/v1/users/requests', methods=['GET', 'POST'])
 def requests():
-    """ Fetches all the requests of a logged in user """
-    return jsonify(sample_account.all_user_requests())
+    """ Fetches all the requests of a logged in user - GET
+        Creates a new request - POST
+    """
+    if request.method == 'GET':
+        return jsonify(sample_account.all_user_requests())
+    else:
+        req_data = request.get_json()
+        return jsonify(sample_account.create_request(req_data))

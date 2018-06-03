@@ -12,6 +12,8 @@ class Users(dict):
             associated with the account.
             login_status (bool) - True/False flag to indicate wheteher or not a
             is logged on.
+            all_requests (dict) - Holds all requests by users
+            current_user - Holds username of currently logged user
     """
 
     def __init__(self):
@@ -19,6 +21,7 @@ class Users(dict):
         self.login_status = False
         self.all_requests = {}
         self.current_user = None
+        self.request_counter = 1
  
     # GET: /api/v1/users/login
     def login(self, username, password):
@@ -60,7 +63,7 @@ class Users(dict):
                 self.user_account[username]['password'] = password
                 self.login_status = True
                 self.current_user = username
-                self.all_requests[username] = {}
+                self.all_requests[self.current_user] = {}
                 return 'Account Registered'
         else:
             return 'Password Does not match - Try again'
@@ -70,8 +73,6 @@ class Users(dict):
         """ (Users) -> str
 
             Fetches all requests associated with a username and displays them
-
-            TODO: Return/print requests to screen
         """
         return self.all_requests[self.current_user]
     
@@ -87,15 +88,18 @@ class Users(dict):
         pass
 
     # POST: /api/v1/users/requests
-    def create_request(self):
-        """ (Users) -> str
+    def create_request(self, request_description):
+        """ (Users, str) -> str
 
         Adds/creates a new request. 
-        Assigns a unique request_ID to keep track of the record
-
-        Returns 'Success' or 'Fail' message
+        Assigns a unique request_ID to keep track of the record.
+        Returns 'Success' message
         """
-        pass
+        self.all_requests[self.current_user] = {
+            self.request_counter: request_description
+        }
+        self.request_counter += 1
+        return 'Request Added'
 
     # PUT: /api/v1/users/requests/<requestID>
     def modify_request(self, requestID):
