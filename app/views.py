@@ -46,4 +46,4 @@ def signout():
     """ Logs out a user.
         Returns 'Success' or 'Fail' message.
     """
-    pass
+    return jsonify(sample_account.logout())

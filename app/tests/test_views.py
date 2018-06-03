@@ -66,7 +66,7 @@ class TestRouteCases(unittest.TestCase):
         result = self.app.post(
             '/api/v1/users/signout'
         )
-        self.assertEqual(result, "You have been SIGNED OUT")
+        self.assertEqual(result.status_code, 200)
 
 
 if __name__ == '__main__':

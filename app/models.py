@@ -34,10 +34,10 @@ class Users(dict):
     def logout(self):
         """(Users) -> str
 
-            Logs out a user.
-            Returns 'Success' or 'Fail' message.
+            Logs out a user and returns message.
         """
-        pass
+        self.login_status = False
+        return "You have been SIGNED OUT"
 
     # POST: /api/v1/register
     def register(
