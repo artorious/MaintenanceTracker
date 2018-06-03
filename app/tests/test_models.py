@@ -76,5 +76,9 @@ class TestUsersClass(unittest.TestCase):
             1234543214)
         self.assertIn('Password Does not match - Try again', result)
 
+    def test_signout_returns_message(self):
+        """ Tests for Logging out message """
+        self.assertEqual(self.sample_user.logout(), "You have been SIGNED OUT")
+
 if __name__ == '__main__':
     unittest.main()

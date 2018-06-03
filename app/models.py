@@ -18,7 +18,7 @@ class Users(dict):
         self.user_account = {}
         self.login_status = False
 
-    # GET: /api/v1/users
+    # GET: /api/v1/users/login
     def login(self, username, password):
         """(Users, str, str) -> str
 
@@ -30,16 +30,14 @@ class Users(dict):
         """
         pass
 
-    # GET: /api/v1/
+    # POST: /api/v1/users/logout
     def logout(self):
         """(Users) -> str
 
-            Logs out a user.
-            Returns 'Success' or 'Fail' message.
-            
-            TODO: Return msg to user 'Success/Fail
+            Logs out a user and returns message.
         """
-        pass
+        self.login_status = False
+        return "You have been SIGNED OUT"
 
     # POST: /api/v1/register
     def register(
@@ -64,7 +62,6 @@ class Users(dict):
             return 'Password Does not match - Try again'
 
    
-
     # GET: /api/v1/requests
     def all_requests(self):
         """ (Users) -> str

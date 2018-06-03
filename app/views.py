@@ -9,7 +9,9 @@ sample_account = Users()
 
 @app.route('/api/v1/register', methods=['POST'])
 def register():
-    """Return msg to user - Success or Failed """
+    """ Register a new user.
+        Return msg to user - Success or Failed 
+    """
     req_data = request.get_json()
 
     if (
@@ -18,7 +20,7 @@ def register():
             'first_name' in req_data and
             'password' in req_data and
             'confirm_password' in req_data):
-        
+
         reg_email = req_data['email']
         reg_username = req_data['username']
         reg_first_name = req_data['first_name']
@@ -37,3 +39,11 @@ def register():
         return jsonify(result), 201
     else:
         return jsonify('Registration Failed')
+
+
+@app.route('/api/v1/users/signout', methods=['POST'])
+def signout():
+    """ Logs out a user.
+        Returns 'Success' or 'Fail' message.
+    """
+    return jsonify(sample_account.logout())
