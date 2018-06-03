@@ -17,7 +17,9 @@ class Users(dict):
     def __init__(self):
         self.user_account = {}
         self.login_status = False
-
+        self.all_requests = {}
+        self.current_user = None
+ 
     # GET: /api/v1/users/login
     def login(self, username, password):
         """(Users, str, str) -> str
@@ -57,22 +59,23 @@ class Users(dict):
                 self.user_account[username]['last_name'] = last_name
                 self.user_account[username]['password'] = password
                 self.login_status = True
+                self.current_user = username
+                self.all_requests[username] = {}
                 return 'Account Registered'
         else:
             return 'Password Does not match - Try again'
 
-   
-    # GET: /api/v1/requests
-    def all_requests(self):
+    # GET: /api/v1/users/requests
+    def all_user_requests(self):
         """ (Users) -> str
 
             Fetches all requests associated with a username and displays them
 
             TODO: Return/print requests to screen
         """
-        pass
+        return self.all_requests[self.current_user]
     
-    # GET: /api/v1/requests/<requestID>
+    # GET: /api/v1/users/requests/<requestID>
     def request_expanded(self, requestID):
         """ (Users, int) -> str
 
@@ -83,7 +86,7 @@ class Users(dict):
         """
         pass
 
-    # POST: /api/v1/requests
+    # POST: /api/v1/users/requests
     def create_request(self):
         """ (Users) -> str
 
@@ -94,7 +97,7 @@ class Users(dict):
         """
         pass
 
-    # PUT: /api/v1/requests/<requestID>
+    # PUT: /api/v1/users/requests/<requestID>
     def modify_request(self, requestID):
         """ (Users, int) -> str
 
