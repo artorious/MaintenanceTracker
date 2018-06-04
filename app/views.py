@@ -55,3 +55,9 @@ def requests():
     else:
         req_data = request.get_json()
         return jsonify(sample_account.create_request(req_data))
+
+
+@app.route('/api/v1/users/<requestID>', methods=['GET'])
+def requestID(requestID):
+    """ Fetch a request belonging to user """
+    pass

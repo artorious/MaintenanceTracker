@@ -46,7 +46,7 @@ class TestRouteCases(unittest.TestCase):
             headers={'content-type': 'application/json'}
         )
         self.assertEqual(
-            404,
+            405,
             result.status_code,
             msg='Resource NOT Found. Account NOT created'
         )
@@ -77,6 +77,7 @@ class TestRouteCases(unittest.TestCase):
         self.assertEqual(result.status_code, 200)
 
     def test_create_request_status_code(self):
+        """ Tests for returned success (200) status code """
         result = self.app.post(
             'api/v1/users/requests',
             data=json.dumps(self.sample_request),
@@ -84,6 +85,27 @@ class TestRouteCases(unittest.TestCase):
         )
         self.assertEqual(result.status_code, 200)
         self.assertIn(b'Request Added', result.data)
+
+    def test_invalid_requestID_status_code(self):
+        """ Tests for returned success (200) status code """
+        result = self.app.get(
+            '/api/v1/users/<int:requestID>',
+            data=json.dumps('sample_requestID'),
+            headers={'content-type': 'application/json'}
+        )
+        self.assertEqual(result.status_code, 200)
+
+    # test valid requestID in payload
+    def test_for_valid_requestID_in_payload(self):
+        """ Tests that user has inputted valid requestID
+            (int) into the payload before posting.
+        """
+        result = self.app.get(
+            '/api/v1/users/<int:requestID>',
+            data=json.dumps('sample_requestID'),
+            headers={'content-type': 'application/json'}
+        )
+        self.assertIn(b'Not Found', result.data)
 
 if __name__ == '__main__':
     unittest.main()
