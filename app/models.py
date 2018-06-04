@@ -85,7 +85,10 @@ class Users(dict):
 
             TODO: Return/print requests to screen
         """
-        pass
+        if isinstance(requestID, int) and requestID <= self.request_counter:
+            return self.all_requests[self.current_user][requestID]
+        else:
+            return 'Not Found'
 
     # POST: /api/v1/users/requests
     def create_request(self, request_description):
